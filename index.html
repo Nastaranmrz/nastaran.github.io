@@ -5,46 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>پورتفولیوی من</title>
   <style>
+    * { box-sizing: border-box; }
+
     body {
       font-family: Tahoma, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0;
+      color: #1f2430;
+      background: #f6f7fb;
       line-height: 1.8;
-      color: #222;
     }
-    h1 { margin-bottom: 0; }
-    .subtitle { color: #666; margin-top: 4px; }
-    .project {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 16px 0;
+
+    header {
+      background: #ffffff;
+      padding: 48px 20px;
+      text-align: center;
+      border-bottom: 1px solid #e5e7ee;
     }
-    a { color: #0b5fff; }
+    header h1 { margin: 0; font-size: 32px; }
+    header p { color: #666; margin: 8px 0 0; }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 { margin-bottom: 20px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e5e7ee;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      background: #dfe3ee;
+    }
+    .card .body { padding: 16px; }
+    .card h3 { margin: 0 0 6px; }
+    .card p { margin: 0 0 12px; color: #555; font-size: 14px; }
+    .card a {
+      color: #0b5fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: #777;
+    }
   </style>
 </head>
 <body>
 
-  <h1>نام تو</h1>
-  <p class="subtitle">طراح UI/UX</p>
+  <header>
+    <h1>نام تو</h1>
+    <p>طراح UI/UX</p>
+  </header>
 
-  <p>اینجا یه معرفی کوتاه درباره‌ی خودت بنویس.</p>
+  <main>
+    <h2>پروژه‌ها</h2>
 
-  <h2>پروژه‌ها</h2>
+    <div class="grid">
 
-  <div class="project">
-    <h3>اسم پروژه‌ی اول</h3>
-    <p>یه توضیح کوتاه: مسئله چی بود و تو چه کاری کردی.</p>
-  </div>
+      <div class="card">
+        <img src="project01.jpg" alt="پروژه اول">
+        <div class="body">
+          <h3>اسم پروژه‌ی اول</h3>
+          <p>مسئله چی بود و تو چه کاری کردی؟ دو خط کافیه.</p>
+          <a href="#" target="_blank">دیدن کیس‌استادی</a>
+        </div>
+      </div>
 
-  <div class="project">
-    <h3>اسم پروژه‌ی دوم</h3>
-    <p>توضیح پروژه.</p>
-  </div>
+      <div class="card">
+        <img src="project2.jpg" alt="پروژه دوم">
+        <div class="body">
+          <h3>اسم پروژه‌ی دوم</h3>
+          <p>توضیح کوتاه پروژه.</p>
+          <a href="#" target="_blank">دیدن کیس‌استادی</a>
+        </div>
+      </div>
 
-  <h2>تماس</h2>
-  <p>ایمیل: <a href="mailto:you@example.com">you@example.com</a></p>
+    </div>
+  </main>
+
+  <footer>
+    ایمیل: <a href="mailto:you@example.com">you@example.com</a>
+  </footer>
 
 </body>
 </html>
